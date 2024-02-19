@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recap Admin Template I</title>
+
+  <!-- FAV Icon -->
+  <link rel="icon" href="./assets/img/fav/favicon.png" type="img/png">
+  <!-- Fontawesome css1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Bootstrap css1 js1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- jQueryui css1 js1 -->
+  <link rel="stylesheet" href="./assets/libs/jquery-ui-1.13.2.custom/jquery-ui.min.css" type="text/css">
+  <!-- Custom css -->
+  <link rel="stylesheet" href="./css/recap.css" type="text/css">
+</head>
+
+<body>
+
+  <!-- Start Navbar Section -->
+  <nav class="navbar navbar-expand-md navbar-dark">
+
+    <button type="button" class="navbar-toggler" data-bs-target="#nav" data-bs-toggle="collapse">
+      <div class="bg-dark lines1"></div>
+      <div class="bg-dark lines2"></div>
+      <div class="bg-dark lines3"></div>
+      <!-- <span class="navbar-toggler-icon"></span> -->
+    </button>
+
+    <div id="nav" class="navbar-collapse collapse">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- start left side bar -->
+          <div class="col-lg-2 col-md-3 fixed-top sidebars">
+
+            <ul class="navbar-nav flex-column mt-3">
+              <li class="nav-item">
+                <a href="javascript:void(0);" class="nav-link p-3 sidebarlinks currents" data-bs-target="#dashboard"
+                  data-bs-toggle="collapse">
+                  <i class="fas fa-home fa-lg me-3"></i>
+                  Dashboard
+                  <i class="fas fa-angle-right fa-lg mores"></i>
+                </a>
+
+                <ul id="dashboard" class="collapse list-unstyled ps-5">
+                  <li><a href="javascript:void(0);" class="nav-link p-2 sidebarlinks">CRM</a></li>
+                  <li><a href="javascript:void(0);" class="nav-link p-2 sidebarlinks">Ecommerce</a></li>
+                  <li><a href="javascript:void(0);" class="nav-link p-2 sidebarlinks">Projects</a></li>
+                  <li><a href="javascript:void(0);" class="nav-link p-2 sidebarlinks">Job</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a href="javascript:void(0);" class="nav-link p-3 sidebarlinks">
+                  <i class="fas fa-file-alt fa-lg me-3"></i>Form
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="javascript:void(0);" class="nav-link p-3 sidebarlinks">
+                  <i class="fas fa-users fa-lg me-3"></i>Users
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="javascript:void(0);" class="nav-link p-3 sidebarlinks" data-bs-target="#sales"
+                  data-bs-toggle="collapse">
+                  <i class="fas fa-shopping-cart fa-lg me-3"></i>
+                  Sales
+                  <i class="fas fa-angle-right fa-lg mores"></i>
+                </a>
+
+                <ul id="sales" class="collapse list-unstyled ps-5">
+                  <li><a href="javascript:void(0);" class="nav-link p-2 sidebarlinks">Cash Sale</a></li>
+                  <li><a href="javascript:void(0);" class="nav-link p-2 sidebarlinks">Credit Sale</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a href="javascript:void(0);" class="nav-link p-3 sidebarlinks">
+                  <i class="fas fa-chart-line fa-lg me-3"></i>Landing
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="javascript:void(0);" class="nav-link p-3 sidebarlinks">
+                  <i class="fas fa-database fa-lg me-3"></i>Report
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="javascript:void(0);" class="nav-link p-3 sidebarlinks">
+                  <i class="fas fa-envelope fa-lg me-3"></i>SMS
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="javascript:void(0);" class="nav-link p-3 sidebarlinks">
+                  <i class="fas fa-map-marker-alt fa-lg me-3"></i>Map
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="javascript:void(0);" class="nav-link p-3 sidebarlinks" data-bs-target="#apps"
+                  data-bs-toggle="collapse">
+                  <i class="fas fa-shapes fa-lg me-3"></i>
+                  App
+                  <i class="fas fa-angle-right fa-lg mores"></i>
+                </a>
+
+                <ul id="apps" class="collapse list-unstyled ps-5">
+                  <li><a href="javascript:void(0);" class="nav-link p-2 sidebarlinks">Calendat</a></li>
+                  <li><a href="javascript:void(0);" class="nav-link p-2 sidebarlinks">Chat</a></li>
+                  <li><a href="javascript:void(0);" class="nav-link p-2 sidebarlinks">Email</a></li>
+                </ul>
+              </li>
+            </ul>
+
+          </div>
+          <!-- end left side bar -->
+
+          <!-- start top side bar -->
+          <div class="col-lg-10 col-md-9 fixed-top ms-auto py-2 topbars">
+
+            <div class="row">
+
+              <div class="col-md-4">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link topbarlinks">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link topbarlinks">Dashboard</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-md-5"></div>
+
+              <div class="col-md-3 d-flex justify-content-center">
+                <ul class="navbar-nav">
+
+                  <li class="nav-item me-3 iconparents">
+                    <a href="javascript:void(0);" class="nav-link topbarlinks iconchilds"><i
+                        class="fas fa-comments fa-lg"></i></a>
+                  </li>
+
+                  <li class="nav-item">
+                    <div class="dropdown">
+                      <a href="javascript:void(0);" data-bs-toggle="dropdown"><img src="./assets/img/users/user1.jpg"
+                          alt="user1" width="32" height="32" class="rounded-circle" /></a>
+
+                      <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0);" class="dropdown-item">New Projects</a></li>
+                        <li><a href="javascript:void(0);" class="dropdown-item">Settings</a></li>
+                        <li><a href="javascript:void(0);" class="dropdown-item">Profile</a></li>
+                        <li class="dropdown-divider"></li>
+                        <li><a href="javascript:void(0);" class="dropdown-item">Logout</a></li>
+                      </ul>
+                    </div>
+                  </li>
+
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+          <!-- end top side bar -->
+        </div>
+      </div>
+    </div>
+
+  </nav>
+  <!-- End Navbar Section -->
+
+  <!-- Start Panel Section -->
+  <section>
+
+    <!-- Start Card I -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-10 col-md-9 ms-auto">
+
+          <div class="row pt-5">
+
+            <div class="col-lg-3 col-sm-6 mb-2">
+              <div class="card rounded-0 cardboxes">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <i class="fas fa-users fa-2x text-primary"></i>
+                    <div class="text-secondary text-end">
+                      <h5>Customers</h5>
+                      <h3>35,250</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <i class="fas fa-sync me-3"></i>
+                  <span>Update</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6 mb-2">
+              <div class="card rounded-0 cardboxes">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <i class="fas fa-shopping-cart fa-2x text-success"></i>
+                    <div class="text-secondary text-end">
+                      <h5>Orders</h5>
+                      <h3>7,525</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <i class="fas fa-sync me-3"></i>
+                  <span>Update</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6 mb-2">
+              <div class="card rounded-0 cardboxes">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <i class="fas fa-money-bill-alt fa-2x text-danger"></i>
+                    <div class="text-secondary text-end">
+                      <h5>Revuenue</h5>
+                      <h3>$ 580,000</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <i class="fas fa-sync me-3"></i>
+                  <span>Update</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6 mb-2">
+              <div class="card rounded-0 cardboxes">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <i class="fas fa-chart-line fa-2x text-info"></i>
+                    <div class="text-secondary text-end">
+                      <h5>Growth</h5>
+                      <h3>+ 40.78%</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <i class="fas fa-sync me-3"></i>
+                  <span>Update</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- End Card I-->
+
+    <!-- Start Card II -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-10 col-md-9 ms-auto">
+
+          <div class="row">
+
+            <div class="col-lg-4 col-sm-12 mb-2">
+
+              <div class="col mb-2">
+                <div class="card rounded-0 cardboxes">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <i class="fas fa-chart-line fa-2x text-info"></i>
+                      <div class="text-secondary text-end">
+                        <h5>Growth</h5>
+                        <h3>+ 40.78%</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <i class="fas fa-sync me-3"></i>
+                    <span>Update</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card rounded-0 cardboxes">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <i class="fas fa-chart-line fa-2x text-info"></i>
+                      <div class="text-danger text-end">
+                        <h5>Return</h5>
+                        <h3>+ 10.78%</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <i class="fas fa-sync me-3"></i>
+                    <span>Update</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-lg-8 col-sm-12 mb-2">
+              <div class="card rounded-0 cardboxes">
+                <div class="card-body">
+                  <div id="chart_div"></div>
+                </div>
+                <div id="change-chart" class="card-footer">
+                  <i class="fas fa-sync me-3"></i>
+                  <span>Update</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- End Card II-->
+
+    <!-- Start User Permission -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-10 col-md-9 ms-auto">
+
+          <div class="row">
+
+            <div class="col-md-6 col-sm-12 mb-2">
+              <h6 class="text-muted">User Permission</h6>
+
+              <div class="container-fluid bg-white">
+                <div class="row p-3 mb-2 align-items-center">
+                  <div class="col-1">
+                    <i class="fas fa-lock-open fa-lg text-success"></i>
+                  </div>
+                  <div class="col-10">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                  </div>
+                  <div class="col-1 form-check form-switch">
+                    <input type="checkbox" name="check1" id="check1" class="form-check-input checks" checked />
+                  </div>
+                </div>
+              </div>
+
+              <div class="container-fluid bg-white">
+                <div class="row p-3 mb-2 align-items-center">
+                  <div class="col-1">
+                    <i class="fas fa-lock-open fa-lg text-success"></i>
+                  </div>
+                  <div class="col-10">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                  </div>
+                  <div class="col-1 form-check form-switch">
+                    <input type="checkbox" name="check2" id="check2" class="form-check-input checks" checked />
+                  </div>
+                </div>
+              </div>
+
+              <div class="container-fluid bg-white">
+                <div class="row p-3 mb-2 align-items-center">
+                  <div class="col-1">
+                    <i class="fas fa-lock-open fa-lg text-success"></i>
+                  </div>
+                  <div class="col-10">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                  </div>
+                  <div class="col-1 form-check form-switch">
+                    <input type="checkbox" name="check3" id="check3" class="form-check-input checks" checked />
+                  </div>
+                </div>
+              </div>
+
+              <div class="container-fluid bg-white">
+                <div class="row p-3 mb-2 align-items-center">
+                  <div class="col-1">
+                    <i class="fas fa-lock-open fa-lg text-success"></i>
+                  </div>
+                  <div class="col-10">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                  </div>
+                  <div class="col-1 form-check form-switch">
+                    <input type="checkbox" name="check4" id="check4" class="form-check-input checks" checked />
+                  </div>
+                </div>
+              </div>
+
+              <div class="container-fluid bg-white">
+                <div class="row p-3 align-items-center">
+                  <div class="col-1">
+                    <i class="fas fa-lock-open fa-lg text-success"></i>
+                  </div>
+                  <div class="col-10">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                  </div>
+                  <div class="col-1 form-check form-switch">
+                    <input type="checkbox" name="check5" id="check5" class="form-check-input checks" checked />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-md-6 col-sm-12 mb-2">
+              <h6 class="text-muted">Inventory</h6>
+
+              <div class="container-fluid">
+                <div class="row">
+
+                  <table class="table table-hover table-secondary">
+                    <thead>
+                      <th>ID</th>
+                      <th>Item</th>
+                      <th>Price</th>
+                      <th>Qty</th>
+                      <th>Status</th>
+                      <th>Edit</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1001</td>
+                        <td>Monitor</td>
+                        <td>$ 50</td>
+                        <td>2000</td>
+                        <td><span class="badge bg-success p-2">In</span></td>
+                        <td><i class="fas fa-edit fa-lg text-primary"></i></td>
+                      </tr>
+
+                      <tr>
+                        <td>1002</td>
+                        <td>Mouse</td>
+                        <td>$ 30</td>
+                        <td>200</td>
+                        <td><span class="badge bg-success p-2">In</span></td>
+                        <td><i class="fas fa-edit fa-lg text-primary"></i></td>
+                      </tr>
+
+                      <tr>
+                        <td>1003</td>
+                        <td>DVD</td>
+                        <td>$ 20</td>
+                        <td>1800</td>
+                        <td><span class="badge bg-success p-2">In</span></td>
+                        <td><i class="fas fa-edit fa-lg text-primary"></i></td>
+                      </tr>
+
+                      <tr>
+                        <td>1004</td>
+                        <td>Speaker</td>
+                        <td>$ 50</td>
+                        <td>0</td>
+                        <td><span class="badge bg-danger p-2">Out</span></td>
+                        <td><i class="fas fa-edit fa-lg text-primary"></i></td>
+                      </tr>
+
+                      <tr>
+                        <td>1005</td>
+                        <td>Ram</td>
+                        <td>$ 12</td>
+                        <td>1000</td>
+                        <td><span class="badge bg-success p-2">In</span></td>
+                        <td><i class="fas fa-edit fa-lg text-primary"></i></td>
+                      </tr>
+
+                      <tr>
+                        <td>1006</td>
+                        <td>Keyboard</td>
+                        <td>$ 80</td>
+                        <td>0</td>
+                        <td><span class="badge bg-danger p-2">Out</span></td>
+                        <td><i class="fas fa-edit fa-lg text-primary"></i></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <nav>
+                    <ul class="pagination pagination-sm justify-content-center">
+                      <li class="paga-item">
+                        <a href="javascript:void(0);" class="page-link px-3 py-2">&lsaquo; Previous</a>
+                      </li>
+                      <li class="paga-item active">
+                        <a href="javascript:void(0);" class="page-link px-3 py-2">1</a>
+                      </li>
+                      <li class="paga-item">
+                        <a href="javascript:void(0);" class="page-link px-3 py-2">2</a>
+                      </li>
+                      <li class="paga-item">
+                        <a href="javascript:void(0);" class="page-link px-3 py-2">3</a>
+                      </li>
+                      <li class="paga-item">
+                        <a href="javascript:void(0);" class="page-link px-3 py-2">Next &rsaquo;</a>
+                      </li>
+                    </ul>
+                  </nav>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- End User Permission -->
+
+    <!-- Start Sale Analysis -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-10 col-md-9 ms-auto">
+
+          <div class="row">
+
+            <div class="col-md-3 col-sm-6 mb-2">
+              <div class="card rounded-0 cardboxes">
+                <div class="card-body">
+                  <h5 class="card-title">Sale Analysis Trend</h5>
+
+                  <div class="mt-2">
+                    <div class="d-flex justify-content-between">
+                      <small>Order Value</small>
+                      <small>155.5%</small>
+                    </div>
+                    <div class="progress" style="height: 10px;">
+                      <div class="progress-bar bg-secondary" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="mt-2">
+                    <div class="d-flex justify-content-between">
+                      <small>Total Product</small>
+                      <small>238.2%</small>
+                    </div>
+                    <div class="progress" style="height: 10px;">
+                      <div class="progress-bar bg-success" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="mt-2">
+                    <div class="d-flex justify-content-between">
+                      <small>Quantity</small>
+                      <small>23.30%</small>
+                    </div>
+                    <div class="progress" style="height: 10px;">
+                      <div class="progress-bar bg-warning" style="width: 50%;" aria-valuenow="50" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-2">
+              <div class="card rounded-0 cardboxes">
+                <div class="card-body">
+                  <h5 class="card-title">Payroll Analysis Trend</h5>
+
+                  <div class="row">
+
+                    <div class="col mb-2">
+                      <div class="d-flex justify-content-between">
+                        <small>Total Salary</small>
+                        <small>$ 7,590</small>
+                      </div>
+                      <div class="progress" style="height: 10px;">
+                        <div class="progress-bar bg-danger" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                          aria-valuemax="100">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col mb-2">
+                      <div class="d-flex justify-content-between">
+                        <small>Total Bonus</small>
+                        <small>$ 1,330</small>
+                      </div>
+                      <div class="progress" style="height: 10px;">
+                        <div class="progress-bar bg-success" style="width: 30%;" aria-valuenow="30" aria-valuemin="0"
+                          aria-valuemax="100">
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-2">
+              <div class="card rounded-0 bg-primary text-white cardboxes">
+                <div class="card-body">
+
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h2>$ 4,624</h2>
+                    <i class="fas fa-suitcase fa-2x"></i>
+                  </div>
+
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h3>Average Sales</h3>
+                    <p>Since last month</p>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-2">
+              <div style="height: 250px;display: flex; justify-content: center;">
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- End Sale Analysis -->
+
+    <!-- Start Quick Sales & Customers Activities -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-10 col-md-9 ms-auto">
+
+          <div class="row">
+
+            <div class="col-md-5 col-sm-12 mb-2">
+              <div class="card rounded-0">
+                <div class="card-body">
+                  <h5 class="card-title text-center text-muted">Quick Sale</h5>
+
+                  <ul class="list-inline text-center">
+
+                    <li class="list-inline-item">
+                      <a href="javascript:void(0);" class="nav-link">
+                        <i class="fas fa-pencil-alt text-success me-2"></i>
+                        <span class="text-muted">Post</span>
+                      </a>
+                    </li>
+
+                    <li class="list-inline-item mx-3">
+                      <a href="javascript:void(0);" class="nav-link">
+                        <i class="fas fa-image text-info me-2"></i>
+                        <span class="text-muted">Image</span>
+                      </a>
+                    </li>
+
+                    <li class="list-inline-item">
+                      <a href="javascript:void(0);" class="nav-link">
+                        <i class="fas fa-video text-primary me-2"></i>
+                        <span class="text-muted">Video</span>
+                      </a>
+                    </li>
+
+                  </ul>
+
+                  <form action="" method="">
+                    <div class="form-group mb-3">
+                      <input type="text" name="post" id="post" class="form-control py-2"
+                        placeholder="Write something" />
+                    </div>
+
+                    <div class="d-grid">
+                      <a href="javascript:void(0);" class="btn btn-primary fw-bold text-uppercase py-2">submit post</a>
+                    </div>
+
+                    <div class="d-flex justify-content-center mt-3">
+                      <div id="datepicker"></div>
+                    </div>
+
+                  </form>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-md-7 col-sm-12 mb-2">
+              <div class="card rounded-0">
+                <div class="card-body">
+                  <h6 class="card-title text-muted">Recent Customers Activities</h6>
+
+                  <div>
+
+                    <div class="card">
+                      <div class="d-grid">
+                        <button type="button" class="btn btn-secondary text-white rounded-0" data-bs-target="#clp1"
+                          data-bs-toggle="collapse">
+                          <img src="./assets/img/users/user2.jpg" alt="user2" width="50" height="50"
+                            class="rounded-circle me-5" />
+                          Mr.John posted a new comment.
+                        </button>
+                      </div>
+                      <div id="clp1" class="collapse show">
+                        <div class="card-body">
+                          <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard
+                            dummy text ever since the 1500s
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <div class="d-grid">
+                        <button type="button" class="btn btn-secondary text-white rounded-0" data-bs-target="#clp2"
+                          data-bs-toggle="collapse">
+                          <img src="./assets/img/users/user1.jpg" alt="user1" width="50" height="50"
+                            class="rounded-circle me-5" />
+                          Ms.July posted a new comment.
+                        </button>
+                      </div>
+                      <div id="clp2" class="collapse">
+                        <div class="card-body">
+                          <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard
+                            dummy text ever since the 1500s
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <div class="d-grid">
+                        <button type="button" class="btn btn-secondary text-white rounded-0" data-bs-target="#clp3"
+                          data-bs-toggle="collapse">
+                          <img src="./assets/img/users/user3.jpg" alt="user3" width="50" height="50"
+                            class="rounded-circle me-5" />
+                          Ms.Yoon posted a new comment.
+                        </button>
+                      </div>
+                      <div id="clp3" class="collapse">
+                        <div class="card-body">
+                          <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard
+                            dummy text ever since the 1500s
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <div class="d-grid">
+                        <button type="button" class="btn btn-secondary text-white rounded-0" data-bs-target="#clp4"
+                          data-bs-toggle="collapse">
+                          <img src="./assets/img/users/feedback-2.jpg" alt="feedback-2.jpg" width="50" height="50"
+                            class="rounded-circle me-5" />
+                          Mr.Anton posted a new comment.
+                        </button>
+                      </div>
+                      <div id="clp4" class="collapse">
+                        <div class="card-body">
+                          <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard
+                            dummy text ever since the 1500s
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <div class="d-grid">
+                        <button type="button" class="btn btn-secondary text-white rounded-0" data-bs-target="#clp5"
+                          data-bs-toggle="collapse">
+                          <img src="./assets/img/users/feedback-4.jpg" alt="feedback-4.jpg" width="50" height="50"
+                            class="rounded-circle me-5" />
+                          Mr.Mathew posted a new comment.
+                        </button>
+                      </div>
+                      <div id="clp5" class="collapse">
+                        <div class="card-body">
+                          <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard
+                            dummy text ever since the 1500s
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <div class="d-grid">
+                        <button type="button" class="btn btn-secondary text-white rounded-0" data-bs-target="#clp6"
+                          data-bs-toggle="collapse">
+                          <img src="./assets/img/users/feedback-1.jpg" alt="feedback-1.jpg" width="50" height="50"
+                            class="rounded-circle me-5" />
+                          Ms.Karen posted a new comment.
+                        </button>
+                      </div>
+                      <div id="clp6" class="collapse">
+                        <div class="card-body">
+                          <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard
+                            dummy text ever since the 1500s
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- End Quick Sales & Customers Activities -->
+
+  </section>
+  <!-- End Panel Section -->
+
+  <!-- Start Footer Seciton -->
+  <footer class="mt-3">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-10 col-md-9 ms-auto">
+
+          <div class="row">
+
+            <div class="col-md-6 text-center">
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a href="javascript:void(0);" class="nav-link">ABC Co,.Ltd</a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="javascript:void(0);" class="nav-link">About</a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="javascript:void(0);" class="nav-link">Contact</a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="javascript:void(0);" class="nav-link">Service</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-md-6 text-center">
+              <div>&copy; <span id="getyear">2000</span> Copyrights. All Rights Reserved</div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer Section -->
+
+
+  <!-- Start Sitesetting -->
+  <div class="sitesettings">
+    <div class="sitesetting-items">
+      <a href="javascript:void(0);" target="_blank">
+        <i class="fas fa-cog anirotates"></i>
+      </a>
+    </div>
+    <div class="sitesetting-items">
+      <a href="javascript:void(0);" target="_blank">
+        <i class="fas fa-comment-dots"></i>
+      </a>
+    </div>
+    <div class="sitesetting-items">
+      <a href="javascript:void(0);" target="_blank">
+        <i class="fas fa-file-alt"></i>
+      </a>
+    </div>
+    <div class="sitesetting-items">
+      <a href="javascript:void(0);" target="_blank">
+        <i class="fas fa-cart-plus"></i>
+      </a>
+    </div>
+  </div>
+  <!-- End Sitesetting -->
+
+
+
+
+
+
+  <!-- Bootstrap css1 js1 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <!-- jQuery js1 -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" type="text/javascript"></script>
+  <!-- jQueryui css1 js1 -->
+  <script src="./assets/libs/jquery-ui-1.13.2.custom/jquery-ui.min.js" type="text/javascript"></script>
+  <!-- Google Chart js1 -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <!-- Chartjs js1 -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Custom Js -->
+  <script src="./js/recap.js" type="text/javascript"></script>
+</body>
+
+</html>
